@@ -103,18 +103,40 @@ let randomX2 = Math.random() * window_width;
 let randomY2 = Math.random() * window_height;
 let randomRadius2 = Math.floor(Math.random() * 100 + 30);
 
+let randomX3 = Math.random() * window_width;
+let randomY3 = Math.random() * window_height;
+let randomRadius3 = Math.floor(Math.random() * 100 + 30);
+
+let randomX4 = Math.random() * window_width;
+let randomY4 = Math.random() * window_height;
+let randomRadius4 = Math.floor(Math.random() * 100 + 30);
+
+let randomX5 = Math.random() * window_width;
+let randomY5 = Math.random() * window_height;
+let randomRadius5 = Math.floor(Math.random() * 100 + 30);
+
+
+
 
 let miCirculo = new Circle(randomX, randomY, randomRadius, "Blue", 'TEC1', 5);
 miCirculo.draw(ctx);
-
 let miCirculo2 = new Circle(randomX2, randomY2, randomRadius2, "Green", 'TEC2', 5);
 miCirculo2.draw(ctx);
+let miCirculo3 = new Circle(randomX3, randomY3, randomRadius3, "Orange", 'TEC3', 5);
+miCirculo3.draw(ctx);
+let miCirculo4 = new Circle(randomX4, randomY4, randomRadius4, "Black", 'TEC4', 5);
+miCirculo3.draw(ctx);
+let miCirculo5 = new Circle(randomX5, randomY5, randomRadius5, "Purple", 'TEC5', 5);
+miCirculo3.draw(ctx);
 
 let updateCircle = function () {
     requestAnimationFrame(updateCircle);
     ctx.clearRect(0, 0, window_width, window_height);
     miCirculo.update(ctx);
-    miCirculo2.update(ctx);  // Actualiza el segundo círculo
+    miCirculo2.update(ctx);
+    miCirculo3.update(ctx); 
+    miCirculo4.update(ctx);
+    miCirculo5.update(ctx); // Actualiza el segundo círculo
 };
 
 updateCircle();
